@@ -24,10 +24,11 @@ class EmailListViewController: UIViewController {
         userModel = UserViewModel()
         userTableViewList.tableFooterView = UIView(frame: CGRect.zero)
         userTableViewList.estimatedRowHeight = 45
-        callPostApi()
+        
         if let tmpDict = UserDefaults.standard.value(forKey: "UsersResponseList") as? [String: Any], tmpDict.keys.count > 0{
             self.updateResultsWithUI(users: userModel!.getResults(dict: tmpDict))
         }
+        callPostApi()
     }
     fileprivate func callPostApi() {
         

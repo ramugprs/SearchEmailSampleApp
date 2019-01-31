@@ -34,6 +34,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
             errorLabel.isHidden = false
         }
     }
+    @IBAction func cancelButtonAction(sender: UIButton){
+        emailTF.text = ""
+    }
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -48,6 +51,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
      }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
+    }
+    @IBAction func didChangeText(_ textField: UITextField){
+        errorLabel.isHidden = true
     }
 }
 

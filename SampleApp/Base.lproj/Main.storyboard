@@ -30,6 +30,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="didChangeText:" destination="BYZ-38-t0r" eventType="editingChanged" id="gmA-2g-Bjb"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="8CC-6p-EhB"/>
                                         </connections>
                                     </textField>
@@ -50,6 +51,9 @@
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ZT-JL-1JI"/>
+                                        </connections>
                                     </button>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a valid email." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igL-yA-BI2">
                                         <rect key="frame" x="15" y="61" width="260" height="14.5"/>
